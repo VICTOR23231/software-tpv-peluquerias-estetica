@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software TPV Peluquerías y Centros de Estética | Sin Cuotas • VeriFactu 2026</title>
+  <meta name="description" content="El software TPV para peluquerías, barberías y salones de estética con pago único de 333 € de por vida. Cero cuotas mensuales. 100% adaptado al Reglamento VeriFactu y ticket QR de la AEAT.">
+  <link rel="canonical" href="https://www.carrito5.com/software-tpv-peluquerias-estetica.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Carrito 5 TPV Peluquerías y Estética",
+        "operatingSystem": "Windows 10, Windows 11",
+        "applicationCategory": "BusinessApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "333.00",
+          "priceCurrency": "EUR",
+          "priceValidUntil": "2027-12-31",
+          "availability": "https://schema.org/InStock"
+        },
+        "description": "Software TPV homologado VeriFactu para peluquerías, barberías y salones de belleza con pago único de 333 € sin cuotas mensuales.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Ábaco Software",
+          "url": "https://www.abacosoftware.com"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-canvas: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-muted: #f1f5f9;
+      --border-subtle: #e2e8f0;
+      --border-focus: #0284c7;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --text-subtle: #94a3b8;
+      --primary: #0284c7;
+      --primary-hover: #0369a1;
+      --primary-light: #e0f2fe;
+      --accent-emerald: #059669;
+      --accent-emerald-light: #ecfdf5;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.04);
+      --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+      --font-ui: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-ui);
+      background-color: var(--bg-canvas);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* GLASS NAV */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 14px 24px;
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 800;
+      font-size: 1.15rem;
+    }
+    .brand-badge {
+      background: #0f172a;
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+    .nav-badge-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent-emerald-light);
+      border: 1px solid #a7f3d0;
+      color: #065f46;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 9999px;
+    }
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+      70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+    .btn-nav {
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 9px 18px;
+      border-radius: 8px;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .btn-nav:hover { background: var(--primary-hover); transform: translateY(-1px); }
+
+    /* HERO SECTION */
+    .hero {
+      padding: 70px 24px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary-light);
+      border: 1px solid #bae6fd;
+      color: #0369a1;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      color: #0f172a;
+      max-width: 900px;
+      margin: 0 auto 20px;
+    }
+    .hero h1 span {
+      background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-desc {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin: 0 auto 36px;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #0f172a;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 16px 32px;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 10px 20px -5px rgba(15, 23, 42, 0.3);
+      transition: all 0.2s;
+    }
+    .btn-primary:hover {
+      background: #1e293b;
+      transform: translateY(-2px);
+      box-shadow: 0 15px 25px -5px rgba(15, 23, 42, 0.4);
+    }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: var(--text-main);
+      border: 1px solid var(--border-subtle);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 15px 26px;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover {
+      background: #f8fafc;
+      border-color: #cbd5e1;
+    }
+
+    /* UI MOCKUP WINDOW (CARRITO 5 EMULATOR) */
+    .window-container {
+      max-width: 1060px;
+      margin: 0 auto 70px;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 16px;
+      box-shadow: var(--shadow-xl);
+      overflow: hidden;
+      text-align: left;
+    }
+    .window-header {
+      background: #1e293b;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #334155;
+    }
+    .window-dots {
+      display: flex;
+      gap: 8px;
+    }
+    .dot { width: 12px; height: 12px; border-radius: 50%; }
+    .dot-red { background: #ef4444; }
+    .dot-yellow { background: #f59e0b; }
+    .dot-green { background: #10b981; }
+    .window-title {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .window-body {
+      display: grid;
+      grid-template-columns: 200px 1fr 340px;
+      height: 480px;
+      background: #f8fafc;
+    }
+    @media(max-width: 900px) {
+      .window-body { grid-template-columns: 1fr; height: auto; }
+      .hero h1 { font-size: 2.1rem; }
+    }
+    .win-sidebar {
+      background: #ffffff;
+      border-right: 1px solid var(--border-subtle);
+      padding: 16px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .win-cat-btn {
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #334155;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+    }
+    .win-cat-btn.active {
+      background: var(--primary-light);
+      color: #0284c7;
+      font-weight: 700;
+    }
+    .win-center {
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .win-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 12px;
+    }
+    .win-item-card {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 14px 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.15s;
+      box-shadow: var(--shadow-sm);
+    }
+    .win-item-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .win-item-icon { font-size: 1.8rem; margin-bottom: 6px; }
+    .win-item-name { font-size: 0.82rem; font-weight: 700; color: #0f172a; margin-bottom: 4px; }
+    .win-item-price { font-family: var(--font-mono); font-size: 0.95rem; font-weight: 800; color: #0284c7; }
+    .win-ticket-panel {
+      background: #ffffff;
+      border-left: 1px solid var(--border-subtle);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .ticket-head {
+      border-bottom: 1px dashed #cbd5e1;
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+    }
+    .ticket-head h4 { font-size: 0.95rem; font-weight: 800; color: #0f172a; }
+    .ticket-head p { font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono); }
+    .ticket-rows {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex-grow: 1;
+    }
+    .t-row { display: flex; justify-content: space-between; }
+    .ticket-total-box {
+      border-top: 2px dashed #0f172a;
+      padding-top: 14px;
+      margin-top: 14px;
+    }
+    .t-total {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #0f172a;
+      font-family: var(--font-mono);
+      margin-bottom: 12px;
+    }
+    .btn-charge {
+      width: 100%;
+      background: #10b981;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+    }
+
+    /* BENTO SECTION */
+    .section-bento {
+      max-width: 1160px;
+      margin: 0 auto 80px;
+      padding: 0 24px;
+    }
+    .section-heading {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 40px;
+    }
+    .section-heading h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+    .section-heading p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+    }
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    @media(max-width: 850px) {
+      .bento-grid { grid-template-columns: 1fr; }
+    }
+    .bento-card {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .bento-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: #cbd5e1;
+    }
+    .bento-card.span-2 { grid-column: span 2; }
+    @media(max-width: 850px) { .bento-card.span-2 { grid-column: span 1; } }
+    .bento-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 18px;
+    }
+    .bento-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+    .bento-text {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* REALISTIC THERMAL RECEIPT METAPHOR */
+    .receipt-container {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 24px 20px;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      background: #fafaf9;
+    }
+    .receipt-container::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      right: 0;
+      height: 10px;
+      background: radial-gradient(circle, transparent, transparent 50%, #fafaf9 50%, #fafaf9 100%);
+      background-size: 14px 14px;
+    }
+
+    /* CALCULATOR BENTO */
+    .calc-box {
+      background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+      color: #fff;
+      border-radius: 16px;
+      padding: 36px;
+      margin-bottom: 80px;
+    }
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    @media(max-width: 800px) { .calc-grid { grid-template-columns: 1fr; } }
+    .slider-group {
+      margin-bottom: 22px;
+    }
+    .slider-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #94a3b8;
+    }
+    .slider-val {
+      color: #38bdf8;
+      font-family: var(--font-mono);
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+    input[type=range] {
+      width: 100%;
+      height: 6px;
+      background: #334155;
+      border-radius: 6px;
+      outline: none;
+      -webkit-appearance: none;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #38bdf8;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+    }
+    .calc-card-res {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+    .kpi-row {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+    .kpi-h { font-size: 0.8rem; color: #94a3b8; text-transform: uppercase; margin-bottom: 4px; }
+    .kpi-v-bad { font-size: 1.4rem; font-family: var(--font-mono); color: #f87171; font-weight: 700; }
+    .kpi-v-good { font-size: 1.4rem; font-family: var(--font-mono); color: #34d399; font-weight: 700; }
+    .kpi-badge-ahorro {
+      display: inline-block;
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid #10b981;
+      color: #34d399;
+      padding: 10px 20px;
+      border-radius: 9999px;
+      font-size: 1.15rem;
+      font-weight: 800;
+      font-family: var(--font-mono);
+    }
+
+    /* FOOTER & MESH */
+    .cluster-section {
+      background: #ffffff;
+      border-top: 1px solid var(--border-subtle);
+      padding: 60px 24px;
+    }
+    .cluster-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .cluster-item {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 18px;
+      text-decoration: none;
+      color: var(--text-main);
+      transition: all 0.2s;
+    }
+    .cluster-item:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+      background: #f0f9ff;
+    }
+    .cluster-item strong { display: block; font-size: 0.95rem; margin-bottom: 4px; color: #0284c7; }
+    .cluster-item span { font-size: 0.82rem; color: var(--text-muted); }
+
+    .site-footer {
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 30px 24px;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="https://www.carrito5.com/" class="brand">
+        <span class="brand-badge">CARRITO 5</span>
+        <span>Ábaco Software</span>
+      </a>
+      <div class="nav-badge-pill">
+        <div class="pulse-dot"></div>
+        <span>Homologado Ley 11/2021 & VeriFactu 2026</span>
+      </div>
+      <a href="https://www.carrito5.com/" class="btn-nav">Descargar Gratis</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-pill">
+      <span>✂️ Especializado en Peluquerías, Barberías y Salones de Estética</span>
+    </div>
+    <h1>El Software TPV que tu salón necesita <span>sin pagar cuotas mensuales</span></h1>
+    <p class="hero-desc">
+      Control de citas, cobro rápido de servicios en mostrador, tickets legales con QR VeriFactu y comisiones de estilistas. Todo en tu propio PC por un único pago de 333 € de por vida.
+    </p>
+    <div class="hero-actions">
+      <a href="https://www.carrito5.com/" class="btn-primary">
+        <span>⚡ Descargar Instalador para Windows</span>
+      </a>
+      <a href="https://www.verifactu-access.com/" class="btn-secondary" target="_blank" rel="noopener">
+        <span>📋 Ver Guía Legal VeriFactu</span>
+      </a>
+    </div>
+
+    <!-- UI SOFTWARE MOCKUP (INTERACTIVE EMULATOR) -->
+    <div class="window-container">
+      <div class="window-header">
+        <div class="window-dots">
+          <div class="dot dot-red"></div>
+          <div class="dot dot-yellow"></div>
+          <div class="dot dot-green"></div>
+        </div>
+        <div class="window-title">
+          <span>🖥️ Carrito 5 TPV v2026.4 - Modo Mostrador: Salón Bella Dona (Caja 01 - Local)</span>
+        </div>
+        <div style="color:#10b981; font-family:var(--font-mono); font-size:0.75rem; font-weight:700;">
+          ONLINE • VERIFACTU OK
+        </div>
+      </div>
+      <div class="window-body">
+        <!-- CATEGORIES -->
+        <div class="win-sidebar">
+          <button class="win-cat-btn active">💇‍♀️ Peluquería</button>
+          <button class="win-cat-btn">🎨 Tintes y Color</button>
+          <button class="win-cat-btn">🧴 Tratamientos</button>
+          <button class="win-cat-btn">💅 Manicura y Uñas</button>
+          <button class="win-cat-btn">🧔 Barbería</button>
+          <button class="win-cat-btn">🛍️ Productos Venta</button>
+        </div>
+        <!-- PRODUCT GRID -->
+        <div class="win-center">
+          <div class="win-grid">
+            <div class="win-item-card">
+              <div class="win-item-icon">✂️</div>
+              <div class="win-item-name">Corte Mujer + Lavado</div>
+              <div class="win-item-price">28,00 €</div>
+            </div>
+            <div class="win-item-card">
+              <div class="win-item-icon">🎨</div>
+              <div class="win-item-name">Color Raíz Premium</div>
+              <div class="win-item-price">34,50 €</div>
+            </div>
+            <div class="win-item-card">
+              <div class="win-item-icon">✨</div>
+              <div class="win-item-name">Tratamiento Keratina</div>
+              <div class="win-item-price">45,00 €</div>
+            </div>
+            <div class="win-item-card">
+              <div class="win-item-icon">🧔</div>
+              <div class="win-item-name">Arreglo Barba + Navaja</div>
+              <div class="win-item-price">14,00 €</div>
+            </div>
+            <div class="win-item-card">
+              <div class="win-item-icon">💅</div>
+              <div class="win-item-name">Manicura Semipermanente</div>
+              <div class="win-item-price">22,00 €</div>
+            </div>
+            <div class="win-item-card">
+              <div class="win-item-icon">🧴</div>
+              <div class="win-item-name">Champú Profesional 500ml</div>
+              <div class="win-item-price">18,50 €</div>
+            </div>
+          </div>
+        </div>
+        <!-- RIGHT TICKET -->
+        <div class="win-ticket-panel">
+          <div>
+            <div class="ticket-head">
+              <h4>SALÓN ESTÉTICA & BARBERÍA</h4>
+              <p>TICKET SIMPLIFICADO: #2026-F0492</p>
+              <p>FECHA: 2026-10-31 • HORA: 10:45</p>
+            </div>
+            <div class="ticket-rows">
+              <div class="t-row"><span>1x Corte Mujer + Lavado</span><span>28,00 €</span></div>
+              <div class="t-row"><span>1x Tratamiento Keratina</span><span>45,00 €</span></div>
+              <div class="t-row"><span>1x Champú Profesional</span><span>18,50 €</span></div>
+            </div>
+          </div>
+          <div class="ticket-total-box">
+            <div class="t-total">
+              <span>TOTAL</span>
+              <span>91,50 €</span>
+            </div>
+            <button class="btn-charge">
+              <span>💳 COBRAR E IMPRIMIR QR</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CALCULATOR BENTO SECTION -->
+  <section class="section-bento">
+    <div class="calc-box">
+      <div class="calc-grid">
+        <div>
+          <h3 style="font-size:1.8rem; font-weight:800; margin-bottom:12px;">Calculadora de Ahorro para tu Salón</h3>
+          <p style="color:#94a3b8; font-size:0.95rem; margin-bottom:28px;">
+            Descubre cuánto dinero regalas a los proveedores en la nube que cobran cuotas mensuales por sillón o caja:
+          </p>
+          <div class="slider-group">
+            <div class="slider-label">
+              <span>Número de cajas o sillones de cobro:</span>
+              <span id="labelCajas" class="slider-val">1 caja</span>
+            </div>
+            <input type="range" id="inputCajas" min="1" max="5" value="1" oninput="updateCalc()">
+          </div>
+          <div class="slider-group">
+            <div class="slider-label">
+              <span>Cuota mensual que te cobra tu software actual:</span>
+              <span id="labelCuota" class="slider-val">49 €/mes</span>
+            </div>
+            <input type="range" id="inputCuota" min="29" max="99" value="49" step="5" oninput="updateCalc()">
+          </div>
+        </div>
+        <div class="calc-card-res">
+          <div class="kpi-row">
+            <div>
+              <div class="kpi-h">Coste SaaS (3 Años)</div>
+              <div id="valSaas" class="kpi-v-bad">1.764 €</div>
+            </div>
+            <div>
+              <div class="kpi-h">Carrito 5 (Pago Único)</div>
+              <div id="valC5" class="kpi-v-good">333 €</div>
+            </div>
+          </div>
+          <div style="margin-bottom:14px; font-size:0.85rem; color:#94a3b8;">Tu ahorro directo en 3 años:</div>
+          <div id="valAhorro" class="kpi-badge-ahorro">+1.431 € AHORRADOS</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BENTO GRID -->
+    <div class="section-heading">
+      <h2>Diseñado para el ritmo real del salón</h2>
+      <p>Olvídate de sistemas lentos que dependen de que no se caiga internet en el barrio.</p>
+    </div>
+
+    <div class="bento-grid">
+      <div class="bento-card">
+        <div class="bento-icon">⚡</div>
+        <div class="bento-title">Cero dependencia de la nube</div>
+        <div class="bento-text">Si se corta la fibra o el WiFi del local, tu TPV sigue cobrando, imprimiendo tickets y abriendo el cajón al 100%. Tu negocio nunca se congela.</div>
+      </div>
+
+      <div class="bento-card">
+        <div class="bento-icon">🛡️</div>
+        <div class="bento-title">Reglamento VeriFactu 2026</div>
+        <div class="bento-text">Cumple con la Ley 11/2021 de la AEAT. Imprime el código QR oficial en cada ticket simplificado con encadenamiento criptográfico SHA-256 inalterable.</div>
+      </div>
+
+      <div class="bento-card">
+        <div class="bento-icon">💇‍♂️</div>
+        <div class="bento-title">Comisiones por Estilista</div>
+        <div class="bento-text">Asigna cada servicio al peluquero correspondiente con un clic y obtén los totales de facturación y comisión al cierre de caja sin cuentas manuales.</div>
+      </div>
+
+      <div class="bento-card span-2">
+        <div class="bento-icon">🧾</div>
+        <div class="bento-title">Ticket Térmico Legal con QR de la AEAT</div>
+        <div class="bento-text">Compatible con cualquier impresora estándar de tickets de 58 mm o 80 mm (ESC/POS). Genera el QR oficial exigido por Hacienda sin necesidad de comprar impresoras especiales ni pagar cuotas a terceros.</div>
+      </div>
+
+      <div class="bento-card">
+        <div class="bento-icon">💰</div>
+        <div class="bento-title">333 € de por vida</div>
+        <div class="bento-text">Pagas una sola vez y el programa es tuyo para siempre. Sin mensualidades, sin letra pequeña y sin contratos de permanencia.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERLINKED MESH -->
+  <section class="cluster-section">
+    <div style="max-width:1160px; margin:0 auto;">
+      <h3 style="font-size:1.35rem; font-weight:800; color:#0f172a; margin-bottom:8px;">Red de Software Especializado por Sector</h3>
+      <p style="font-size:0.9rem; color:var(--text-muted);">Soluciones verticales homologadas de Ábaco Software con pago único:</p>
+      <div class="cluster-cards">
+        <a class="cluster-item" href="https://victor23231.github.io/tpv-ferreterias-bricolaje/">
+          <strong>🔨 Ferreterías y Bricolaje</strong>
+          <span>Venta ágil por mostrador, tornillería y miles de referencias.</span>
+        </a>
+        <a class="cluster-item" href="https://victor23231.github.io/software-tpv-tiendas-ropa-moda/">
+          <strong>👗 Tiendas de Ropa y Moda</strong>
+          <span>Control de matrices de tallas, colores e impresión de etiquetas.</span>
+        </a>
+        <a class="cluster-item" href="https://victor23231.github.io/tpv-zapateria-software-calzado/">
+          <strong>👠 Zapaterías y Calzado</strong>
+          <span>Gestión de stock por pares, numeración y cobro rápido.</span>
+        </a>
+        <a class="cluster-item" href="https://www.verifactu-access.com/" target="_blank" rel="noopener">
+          <strong>📋 Guía Oficial VeriFactu 2026</strong>
+          <span>Requisitos legales de la AEAT y certificación responsable.</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>Desarrollado en España por <a href="https://www.abacosoftware.com" target="_blank" rel="noopener" style="color:#fff; font-weight:700; text-decoration:underline;">Ábaco Software</a> • Carrito 5 © 2026. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function updateCalc() {
+      const cajas = parseInt(document.getElementById('inputCajas').value, 10);
+      const cuota = parseInt(document.getElementById('inputCuota').value, 10);
+      document.getElementById('labelCajas').textContent = cajas + (cajas === 1 ? ' caja' : ' cajas');
+      document.getElementById('labelCuota').textContent = cuota + ' €/mes';
+
+      const totalSaas = cajas * cuota * 36;
+      const totalC5 = 333 + ((cajas - 1) * 150);
+      const ahorro = totalSaas - totalC5;
+
+      document.getElementById('valSaas').textContent = totalSaas.toLocaleString('es-ES') + ' €';
+      document.getElementById('valC5').textContent = totalC5.toLocaleString('es-ES') + ' €';
+      document.getElementById('valAhorro').textContent = (ahorro > 0 ? '+' : '') + ahorro.toLocaleString('es-ES') + ' € AHORRADOS';
+    }
+  </script>
+</body>
+</html>
